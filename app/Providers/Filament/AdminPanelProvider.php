@@ -36,6 +36,11 @@ class AdminPanelProvider extends PanelProvider
                 'warning' => Color::Orange,
             ])
             ->font('Inter')
+            ->navigationGroups([
+                'Employee Management',
+                'System Management',
+                'User Management'
+            ])
             ->brandLogo(asset('images/logo.svg'))
             ->brandLogoHeight('2rem')
             ->favicon(asset('images/favicon.png'))
