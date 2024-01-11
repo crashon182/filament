@@ -10,7 +10,7 @@ class Employee extends Model
 {
     use HasFactory;
     protected $guarded = [];
-        
+
 
 
     public function country(): BelongsTo
@@ -31,5 +31,10 @@ class Employee extends Model
     public function department(): BelongsTo
     {
         return $this->belongsTo(Department::class);
+    }
+
+    public function team(): BelongsTo
+    {
+        return $this->belongsTo(Team::class);
     }
 }

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('team_id')->contrained()->cascadeOnDelete();
             $table->foreignId('country_id')->contrained()->cascadeOnDelete();
             $table->foreignId('state_id')->contrained()->cascadeOnDelete();
             $table->foreignId('city_id')->contrained()->cascadeOnDelete();
