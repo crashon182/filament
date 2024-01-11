@@ -1,11 +1,10 @@
 <?php
-namespace App\Filament\Pages\Tenancy;
+namespace App\Filament\App\Pages\Tenancy;
 
+use App\Models\Team;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Pages\Tenancy\RegisterTenant;
-use Illuminate\Database\Eloquent\Model;
-use App\Models\Team;
 
 class RegisterTeam extends RegisterTenant
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\App\Resources;
 
-use App\Filament\Resources\DepartmentResource\Pages;
-use App\Filament\Resources\DepartmentResource\RelationManagers;
+use App\Filament\App\Resources\DepartmentResource\Pages;
+use App\Filament\App\Resources\DepartmentResource\RelationManagers;
 use App\Models\Department;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -21,16 +21,7 @@ class DepartmentResource extends Resource
 {
     protected static ?string $model = Department::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
-
-    protected static ?string $navigationLabel = 'Departamento';
-
-    protected static ?string $modelLabel = 'Departamento';
-
-    protected static ?string $navigationGroup = 'System Management';
-
-    protected static ?int $navigationSort = 4;
-
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
@@ -103,7 +94,7 @@ class DepartmentResource extends Resource
         return [
             'index' => Pages\ListDepartments::route('/'),
             'create' => Pages\CreateDepartment::route('/create'),
-
+            'view' => Pages\ViewDepartment::route('/{record}'),
             'edit' => Pages\EditDepartment::route('/{record}/edit'),
         ];
     }
